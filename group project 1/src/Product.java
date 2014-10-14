@@ -1,4 +1,5 @@
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -8,10 +9,16 @@ public class Product extends java.lang.Object
 	
 private String snackName;
 private int costInCents;
-private int quantity;
+private int amount;
 
-Scanner file = new Scanner (new File("snacks.txt"));
-int numberOfLinesOfData = file.nextInt();
+public static void getText() throws IOException 
+{
+	
+	Scanner file = new Scanner (new File("snacks.txt"));
+	
+}
+
+
 
 static ArrayList <Product> results = new ArrayList<Product>();
 
@@ -37,11 +44,11 @@ static ArrayList <Product> results = new ArrayList<Product>();
 		this.costInCents = costInCents;
 	}
 	public int getQuantity() {
-		return quantity;
+		return amount;
 	}
 
 	public void setQuantity(int quantity) {
-		this.quantity = quantity;
+		this.amount = quantity;
 	
 }
 }
